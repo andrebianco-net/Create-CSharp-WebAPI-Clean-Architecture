@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "QhFip/UpxgqYaDnCKVw/4aAJx7AIhZHwN7RvoBZO8ItX71ZIIjPw8kOpt8wMaMypJRSyQ/fwVOn8gDfx1qxrUQ==",
+  "success": true,
+  "projectFilePath": "/home/andre/Projects/ProductRegistrationService/ProductRegistrationService.Domain/ProductRegistrationService.Domain.csproj",
+  "expectedPackageFiles": [
+    "/home/andre/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.3/microsoft.aspnetcore.app.ref.7.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
