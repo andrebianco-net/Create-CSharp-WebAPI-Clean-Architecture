@@ -1,0 +1,11 @@
+ProductRegistrationService.Application/bin/
+ProductRegistrationService.Application/obj/Debug/
+ProductRegistrationService.Domain/bin/
+ProductRegistrationService.Domain/obj/Debug/
+ProductRegistrationService.Infra.Data/bin/
+ProductRegistrationService.Infra.Data/obj/Debug/
+ProductRegistrationService.Infra.IoC/bin/
+ProductRegistrationService.Infra.IoC/obj/Debug/
+ProductRegistrationService.WebAPI/bin/
+ProductRegistrationService.WebAPI/obj/Debug/
+
