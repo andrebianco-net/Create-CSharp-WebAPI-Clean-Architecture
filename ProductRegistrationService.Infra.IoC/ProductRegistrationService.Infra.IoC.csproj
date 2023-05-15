@@ -1,5 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\ProductRegistrationService.Domain\ProductRegistrationService.Domain.csproj" />
+    <ProjectReference Include="..\ProductRegistrationService.Application\ProductRegistrationService.Application.csproj" />
+    <ProjectReference Include="..\ProductRegistrationService.Infra.Data\ProductRegistrationService.Infra.Data.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
