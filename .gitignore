@@ -8,4 +8,7 @@ ProductRegistrationService.Infra.IoC/bin/
 ProductRegistrationService.Infra.IoC/obj/Debug/
 ProductRegistrationService.WebAPI/bin/
 ProductRegistrationService.WebAPI/obj/Debug/
-
+ProductRegistrationService.Application/obj/
+ProductRegistrationService.Infra.Data/obj/
+ProductRegistrationService.Infra.IoC/obj/
+ProductRegistrationService.WebAPI/obj/
