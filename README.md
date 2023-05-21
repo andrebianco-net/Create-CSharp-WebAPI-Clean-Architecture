@@ -34,9 +34,9 @@ https://www.youtube.com/watch?v=69sfWNzxTMc
 
 Linked to Solid Single Responsibility, explained above, and DRY - Don't Repeat Yourself, that talks about don't create more lines of the same code.
 
-### Dependency Injection Principle - DIP
+### Dependency Inversion Principle - DIP
 
 One business class shouldn't depends neither infrastructure class nor any other concrete class, but both of them need to know their own abstractions.
 
-Inversion of Dependency occurs when we inject (Inject of Dependency) a concrete implementation inside a class's constructor using the interface of that class injected. When it happens we use the mechanic of Inversion of Control provided to create an instantiation of class.
+The Inversion of Dependency occurs when we inject (Inject of Dependency) a concrete implementation inside a class's constructor using the interface of that class injected. When it happens we use the mechanic of Inversion of Control provided to create an instantiation of class.
 
