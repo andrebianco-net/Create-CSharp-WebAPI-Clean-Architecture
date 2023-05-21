@@ -36,10 +36,6 @@ Finally, as a small solution and just an example, I won't implement authenticati
 
 <ins>Dependency Inversion:</ins> An abstraction shouldn't depend of details from an implementation, but the details of an implementation needs depend from an abstraction.
 
-https://procodeguide.com/design/solid-principles-with-csharp-net-core/
-
-https://www.youtube.com/watch?v=69sfWNzxTMc
-
 
 ### Separation of Concerns - SoC
 
@@ -51,3 +47,10 @@ One business class shouldn't depends neither infrastructure class nor any other 
 
 The Inversion of Dependency occurs when we inject (Inject of Dependency) a concrete implementation inside a class's constructor using the interface of that class injected. When it happens we use the mechanic of Inversion of Control provided to create an instantiation of class.
 
+## References
+
+Solid Principles with C# .NET Core with Practical Examples & Interview Questions. Pro Code Guide. From https://procodeguide.com/design/solid-principles-with-csharp-net-core/
+
+SOLID Design Principles Explained in a Nutshell. A Dev' Story. From https://www.youtube.com/watch?v=69sfWNzxTMc
+
+Clean Architecture Essencial - ASP .NET Core com C#. Macoratti. From https://www.udemy.com/course/clean-architecture-essencial-asp-net-core-com-c/
