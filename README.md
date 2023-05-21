@@ -26,6 +26,7 @@ C# Web API based on Clean Architecture, using some aspects of CQRS and xUnit to 
 <ins>Dependency Inversion:</ins> An abstraction shouldn't depend of details from an implementation, but the details of an implementation needs depend from an abstraction.
 
 https://procodeguide.com/design/solid-principles-with-csharp-net-core/
+
 https://www.youtube.com/watch?v=69sfWNzxTMc
 
 
