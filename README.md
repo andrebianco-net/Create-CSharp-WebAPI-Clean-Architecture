@@ -19,8 +19,6 @@ The Domain will be defined by two entities, Product and Category:
 
 1:N relationship: One Category can have multiple Products.
 
-Finally, as a small solution and just an example, I won't implement authentication like JWT or Session Cookie.
-
 
 ## Theory:
 
