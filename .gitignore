@@ -12,3 +12,4 @@ ProductRegistrationService.Application/obj/
 ProductRegistrationService.Infra.Data/obj/
 ProductRegistrationService.Infra.IoC/obj/
 ProductRegistrationService.WebAPI/obj/
+appsettings.json
