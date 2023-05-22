@@ -4,7 +4,7 @@
 Creating a C# Web API based on Clean Architecture.
 
 
-## Context:
+## General Scope:
 
 Product Registration Service implementation propose a small example of how to create a REST API using C#.
 
@@ -18,6 +18,66 @@ The Domain will be defined by two entities, Product and Category:
 2. Domain Category (parent): CategoryId (int, identity), Name (string).
 
 1:N relationship: One Category can have multiple Products.
+
+
+## General Scope - Business rules for Product
+
+1. Define functionality to display the products.
+2. Define functionality to create a new product.
+3. Allow to modify the product properties (Id can't be modified).
+4. Define functionality to delete a product by Id.
+5. Define relationship between Product and Category (Navigation property).
+6. Do not allow to create an inconsistent state product (Creating a parameterized constructor).
+7. Do not allow that product properties be changed externally (private setter).
+8. Do not allow that product properties Id, Price and Stock have negative values.
+9. Do not allow that product properties Name and Description be null or empty.
+10. Allow the property image be null.
+11. The Name attribute don't be less than 3 characters.
+12. The Description attribute don't be less than 5 characters.
+13. The Image don't be contain more than 250 characters.
+14. The Image attribute shall be a http link.
+15. Define business rules validation for the domain product.
+
+
+## General Scope - Business rules for Category
+
+1. Define functionality to display the categories.
+2. Define functionality to create a new category.
+3. Allow to modify the category properties (Id can't be modified).
+4. Define functionality to delete a category by Id.
+5. Define relationship between Category and Product (Navigation property).
+6. Do not allow to create an inconsistent state category (Creating a parameterized constructor).
+7. Do not allow that category properties be changed externally (private setter).
+8. Do not allow that category properties CategoryId have negative value.
+9. Do not allow that category properties Name be null or empty.
+10. The Name attribute don't be less than 3 characters.
+11. Define business rules validation for the domain category.
+
+
+## General Scope - Data persistence
+
+1. Use relational database: SQL Server.
+2. Use a ORM tool: Entity Framework Core.
+3. Use the Entity Framework Core Code-First approach in order to create a database and tables.
+4. Use a database provider: Microsoft.EntityFrameworkCore.SqlServer.
+5. Use a tool for apply the migrations: Microsoft.EntityFrameworkCore.Tools.
+6. Decouple the access layer from ORM: Repository Pattern.
+
+
+## General Scope - Nomenclature
+
+1. Use the recommended nomenclature by Microsoft in order to name classes, methods, params and variables.
+2. Use CamelCase. Ex: valueOfDiscount.
+3. Use PascalCase. Ex: FirstName, CalculateIncomeTax();
+4. Language defined: English.
+
+|Resource|Nomenclature|Example|
+|---|---|---|
+|Class|PascalCase|Product, AddCategory|
+|Interface|I + PascalCase|IUser, ICalculateTotal|
+|Method, Property|PascalCase|Address, FirstName|
+|Variable, Params|CamelCase|stock, taxValue|
+|Constants|Capital with underscore|DISCONT_VALUE|
 
 
 ## Theory:
