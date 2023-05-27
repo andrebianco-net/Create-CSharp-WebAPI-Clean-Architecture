@@ -105,6 +105,9 @@ One business class shouldn't depends neither infrastructure class nor any other 
 
 The Inversion of Dependency occurs when we inject (Inject of Dependency) a concrete implementation inside a class's constructor using the interface of that class injected. When it happens we use the mechanic of Inversion of Control provided to create an instantiation of class.
 
+## How to run this project
+
+
 ## References
 
 Solid Principles with C# .NET Core with Practical Examples & Interview Questions. Pro Code Guide. From https://procodeguide.com/design/solid-principles-with-csharp-net-core/
