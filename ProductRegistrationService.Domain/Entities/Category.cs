@@ -20,6 +20,8 @@ namespace ProductRegistrationService.Domain.Entities
         public void Update(string name)
         {
             ValidateDomain(name);
+
+            ModifiedAt = DateTime.Now;
         }
 
         public ICollection<Product> Products { get; set; }

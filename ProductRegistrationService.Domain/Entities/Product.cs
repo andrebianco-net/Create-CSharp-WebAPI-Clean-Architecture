@@ -25,6 +25,8 @@ namespace ProductRegistrationService.Domain.Entities
         {
             ValidateDomain(name, description, price, stock, image);
             CategoryId = categoryId;
+
+            ModifiedAt = DateTime.Now;
         }
 
         private void ValidateDomain(string name, string description, decimal price, int stock, string image)
