@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductRegistrationService.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductRegistrationService.WebAPI", "ProductRegistrationService.WebAPI\ProductRegistrationService.WebAPI.csproj", "{9C759225-15DA-4DF1-9503-527DEC67D347}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductRegistrationService.Domain.Tests", "ProductRegistrationService.Domain.Tests\ProductRegistrationService.Domain.Tests.csproj", "{A36784F9-503C-4F26-82D0-FAC2B0693E47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{9C759225-15DA-4DF1-9503-527DEC67D347}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C759225-15DA-4DF1-9503-527DEC67D347}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C759225-15DA-4DF1-9503-527DEC67D347}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A36784F9-503C-4F26-82D0-FAC2B0693E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A36784F9-503C-4F26-82D0-FAC2B0693E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A36784F9-503C-4F26-82D0-FAC2B0693E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A36784F9-503C-4F26-82D0-FAC2B0693E47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
