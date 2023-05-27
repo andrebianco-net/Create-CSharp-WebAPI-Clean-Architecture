@@ -1,15 +1,18 @@
-public class DomainExceptionValidation : Exception
+namespace ProductRegistrationService.Domain.Validation
 {
-    public DomainExceptionValidation(string error) : base(error)
+    public class DomainExceptionValidation : Exception
     {
-        
-    }
-    
-    public static void When(bool hasError, string error)
-    {
-        if(hasError)
+        public DomainExceptionValidation(string error) : base(error)
         {
-            throw new DomainExceptionValidation(error);
+
+        }
+
+        public static void When(bool hasError, string error)
+        {
+            if (hasError)
+            {
+                throw new DomainExceptionValidation(error);
+            }
         }
     }
 }
