@@ -29,7 +29,7 @@ namespace ProductRegistrationService.Domain.Tests
             Action action = () => new Category(1, "Ca");
             action.Should()
                     .Throw<ProductRegistrationService.Domain.Validation.DomainExceptionValidation>()
-                    .WithMessage("Invalid name, too short, minimum 3 characters");
+                    .WithMessage("Invalid name, too short, minimum 3 characters.");
         }
 
         [Fact]
@@ -38,7 +38,7 @@ namespace ProductRegistrationService.Domain.Tests
             Action action = () => new Category(1, "");
             action.Should()
                     .Throw<ProductRegistrationService.Domain.Validation.DomainExceptionValidation>()
-                    .WithMessage("Invalid name.Name is required");
+                    .WithMessage("Invalid name. Name is required.");
         }
 
         [Fact]
