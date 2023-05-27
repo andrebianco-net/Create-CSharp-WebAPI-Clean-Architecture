@@ -8,7 +8,7 @@ Creating a C# Web API based on Clean Architecture.
 
 Product Registration Service implementation propose a small example of how to create a REST API using C#.
 
-C# Web API based on Clean Architecture, using some aspects of CQRS, Web API, Repository and xUnit to test the implementation. I tryed to follow the theory bellow.
+C# Web API .Net 7.0 based on Clean Architecture, using some aspects of CQRS, Web API, Repository and xUnit to test the implementation. I tryed to follow the theory bellow.
 
 The Solution will be a Web API/RESTful which can be reached by a CRUD or an Integration from other Solution or by Postman tool.
 
