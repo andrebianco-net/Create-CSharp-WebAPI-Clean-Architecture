@@ -1,5 +1,12 @@
-# Configuration file
-appsettings.json
+# NuGet Packages
+*.nupkg
+*.nuget.g.props
+*.nuget.g.targets
+*.nuget.cache
+**/packages/*
+project.lock.json
+project.assets.json
+*.nuget.dgspec.json
 
 # Build results
 artifacts/
@@ -21,25 +28,3 @@ msbuild.wrn
 .libs/
 *.lo
 *.o
-
-# Ignore NuGet Packages
-*.nupkg
-
-# The packages folder can be ignored because of Package Restore
-**/[Pp]ackages/*
-
-# except build/, which is used as an MSBuild target.
-!**/[Pp]ackages/build/
-
-# Uncomment if necessary however generally it will be regenerated when needed
-#!**/[Pp]ackages/repositories.config
-
-# NuGet v3's project.json files produces more ignorable files
-*.nuget.props
-*.nuget.targets
-
-# Ignore other intermediate files that NuGet might create. project.lock.json is used in conjunction
-# with project.json (NuGet v3); project.assets.json is used in conjunction with the PackageReference
-# format (NuGet v4 and .NET Core).
-project.lock.json
-project.assets.json
