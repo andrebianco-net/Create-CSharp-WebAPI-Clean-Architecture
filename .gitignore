@@ -31,3 +31,6 @@ msbuild.wrn
 project.lock.json
 project.assets.json
 *.nuget.dgspec.json
+
+# ignore vscode configuration
+.vscode/
