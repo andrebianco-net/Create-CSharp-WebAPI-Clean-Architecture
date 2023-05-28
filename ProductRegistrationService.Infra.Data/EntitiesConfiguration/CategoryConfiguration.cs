@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ProductRegistrationService.Domain.Entities;
 
-namespace ProductRegistrationService.Infra.Data.Context.EntitiesConfiguration
+namespace ProductRegistrationService.Infra.Data.EntitiesConfiguration
 {
     public class CategoryConfiguration : IEntityTypeConfiguration<Category>
     {
