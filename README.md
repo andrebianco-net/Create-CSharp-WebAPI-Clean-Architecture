@@ -111,28 +111,28 @@ The Inversion of Dependency occurs when we inject (Inject of Dependency) a concr
 
 ## How to run this project
 
-#1. Clone project:
+####1. Clone project:
 
 $ git clone https://github.com/andrebianco-net/create-csharp-webapi-clean-architecture.git
 
-#2. Update file appsettings.json with a valid connection string:
+####2. Update file appsettings.json with a valid connection string:
 
 "ConnectionStrings": {
     "DefaultConnection": "Data Source=XXXXXX;Initial Catalog=XXXXXX;User Id=XXXXXX;Password=XXXXXX;TrustServerCertificate=true;"
 },
 
-#3. Use migrations commands:
+####3. Use migrations commands:
 
 <ins>Create migrations:</ins> dotnet ef migrations add InitialDatabase --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj --verbose 
 <ins>Update database:</ins> dotnet ef database update --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj --verbose 
 <ins>Remove migrations:</ins> dotnet ef migrations remove --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj --verbose
 <ins>List migrations:</ins> dotnet ef migrations list --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj --verbose
 
-#4. Compile project:
+####4. Compile project:
 
 $ dotnet build
 
-#5. Run project:
+####5. Run project:
 
 $ dotnet run --project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj
 
