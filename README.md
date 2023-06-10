@@ -136,7 +136,11 @@ $ git clone https://github.com/andrebianco-net/create-csharp-webapi-clean-archit
 
 $ dotnet build
 
-#### 5. Run project:
+#### 5. Test project:
+
+$ dotnet test
+
+#### 6. Run project:
 
 $ dotnet run --project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj
 
