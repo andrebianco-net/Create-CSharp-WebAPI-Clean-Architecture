@@ -108,7 +108,7 @@ Linked to Solid Single Responsibility, explained above, and DRY - Don't Repeat Y
 
 One business class shouldn't depends neither infrastructure class nor any other concrete class, but both of them need to know their own abstractions.
 
-The Inversion of Dependency occurs when we inject (Inject of Dependency) a concrete implementation inside a class's constructor using the interface of that class injected. When it happens we use the mechanic of Inversion of Control provided to create an instantiation of class. A IoC container is provide by .Net framework (Microsoft.Extensions.DependencyInjection). 
+The Inversion of Dependency occurs when we inject (Inject of Dependency) a concrete implementation inside a class's constructor using the interface of that class injected. When it happens we use the mechanic of Inversion of Control provided to create an instantiation of class. A IoC container is provide by .Net Core (Microsoft.Extensions.DependencyInjection). 
 
 ## How to run this project
 
