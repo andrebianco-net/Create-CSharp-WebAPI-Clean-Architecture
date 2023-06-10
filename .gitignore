@@ -1,5 +1,6 @@
 # Configuration file
 appsettings.json
+Migrations/
 
 # Build results
 artifacts/
