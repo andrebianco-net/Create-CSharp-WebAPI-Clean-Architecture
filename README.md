@@ -7,6 +7,7 @@ This example is an adaptation based on an example used in a course I have done. 
 
 In order to know more aboute my career check my Linkedin profile, please.
 
+https://www.linkedin.com/in/andrebianco-net/
 
 ## General Scope:
 
