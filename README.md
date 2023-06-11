@@ -13,7 +13,7 @@ https://www.linkedin.com/in/andrebianco-net/
 
 Product Registration Service implementation propose a small example of how to create a REST API using C#.
 
-C# Web API .Net 7.0 based on Clean Architecture, using Web API, Repository, xUnit to test the implementation and some aspects of CQS (Command Query Separation)/CQRS (Command Query Responsability Separation). I tryed to follow the theory bellow.
+C# Web API .Net 7.0 based on Clean Architecture, using Web API, Repository, xUnit to test the implementation as also some aspects of CQS (Command Query Separation) and CQRS (Command Query Responsability Separation). I tryed to follow the theory bellow.
 
 The Solution will be a Web API/ RESTful which can be reached by a CRUD or an Integration from other Solution or by Postman tool.
 
