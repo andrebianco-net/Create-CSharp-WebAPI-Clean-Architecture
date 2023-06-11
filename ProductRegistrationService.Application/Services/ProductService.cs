@@ -29,10 +29,10 @@ namespace ProductRegistrationService.Application.Services
             return _mapper.Map<ProductDTO>(productEntity);
         }
 
-        public async Task<IEnumerable<ProductDTO>> GetCategories()
+        public async Task<IEnumerable<ProductDTO>> GetProducts()
         {
-            var categoriesEntity = await _productRepository.GetProductsAsync();
-            return _mapper.Map<IEnumerable<ProductDTO>>(categoriesEntity);
+            var productsEntity = await _productRepository.GetProductsAsync();
+            return _mapper.Map<IEnumerable<ProductDTO>>(productsEntity);
         }
 
         public async Task Remove(int? id)
