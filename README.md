@@ -124,13 +124,13 @@ $ git clone https://github.com/andrebianco-net/create-csharp-webapi-clean-archit
 
 #### 3. Use migrations commands:
 
-<ins>Create migrations:</ins> dotnet ef migrations add InitialDatabase --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj [--verbose]
+<ins>Create migrations:</ins> dotnet ef migrations add InitialDatabase --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj **[** --verbose **]**
 
-<ins>Update database:</ins> dotnet ef database update --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj [--verbose]
+<ins>Update database:</ins> dotnet ef database update --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj **[** --verbose **]**
 
-[<ins>Remove migrations:</ins> dotnet ef migrations remove --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj [--verbose]
+**[** <ins>Remove migrations:</ins> dotnet ef migrations remove --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj **[** --verbose **]**
 
-[<ins>List migrations:</ins> dotnet ef migrations list --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj [--verbose]]
+**[** <ins>List migrations:</ins> dotnet ef migrations list --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj **[** --verbose **]]**
 
 #### 4. Compile project:
 
