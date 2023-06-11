@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -5,7 +6,9 @@ using ProductRegistrationService.Application.interfaces;
 using ProductRegistrationService.Application.Mappings;
 using ProductRegistrationService.Application.Services;
 using ProductRegistrationService.Context;
+using ProductRegistrationService.Domain.Account;
 using ProductRegistrationService.Domain.interfaces;
+using ProductRegistrationService.Infra.Data.Identity;
 using ProductRegistrationService.Infra.Data.Repositories;
 
 namespace ProductRegistrationService.Infra.IoC
@@ -22,12 +25,24 @@ namespace ProductRegistrationService.Infra.IoC
                         )
             );
 
+            // Authenticate
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                    .AddEntityFrameworkStores<ApplicationDbContext>()
+                    .AddDefaultTokenProviders();
+
+            services.AddScoped<IAuthenticate, AuthenticateService>();
+
+            services.ConfigureApplicationCookie(options => options.AccessDeniedPath = "/Account/Login");
+
+            // Repository
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
 
+            // Service
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IProductService, ProductService>();
 
+            // Mapper
             services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 
             return services;
