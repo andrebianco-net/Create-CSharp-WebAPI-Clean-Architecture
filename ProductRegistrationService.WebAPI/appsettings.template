@@ -2,6 +2,11 @@
     "ConnectionStrings": {
       "DefaultConnection": "YOUR STRING CONNECTION"
     },
+    "Jwt": {
+      "SecretKey": "YOUR SECRET KEY",
+      "Issuer": "mywebsite.net",
+      "Audience": "http://www.mywebsite.net"
+    },
     "Logging": {
       "LogLevel": {
         "Default": "Information",

@@ -1,3 +1,4 @@
+
 namespace ProductRegistrationService.WebAPI.Models
 {
     public class UserToken
