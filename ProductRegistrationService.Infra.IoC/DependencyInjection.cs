@@ -41,7 +41,6 @@ namespace ProductRegistrationService.Infra.IoC
             // Service
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IProductService, ProductService>();
-            services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
 
             // Mapper
             services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
