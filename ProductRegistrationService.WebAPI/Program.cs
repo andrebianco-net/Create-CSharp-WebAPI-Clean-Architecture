@@ -1,4 +1,5 @@
 using ProductRegistrationService.Infra.IoC;
+using Swashbuckle.AspNetCore.SwaggerUI;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,21 +7,43 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddInfrastructureSeed(builder.Configuration);
 builder.Services.AddInfrastructureJWT(builder.Configuration);
+builder.Services.AddInfrastructureSwagger(builder.Configuration);
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+string version = builder.Configuration["Swagger:Version"];
+string definition = builder.Configuration["Swagger:Title"];
+
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    if (Convert.ToBoolean(builder.Configuration["Swagger:Debugging"]))
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI(
+            x => x.ConfigObject.Urls = new[] { new UrlDescriptor { Name = $"{definition} {version}", Url = $"{version}/swagger.json" } }
+        );
+    }
+}
+else
+{
+    if (Convert.ToBoolean(builder.Configuration["Swagger:Production"]))
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI(
+            x => x.ConfigObject.Urls = new[] { new UrlDescriptor { Name = $"{definition} {version}", Url = $"{version}/swagger.json" } }
+        );
+    }
 }
 
 app.UseHttpsRedirection();
+
+app.UseStatusCodePages();
+
+app.UseRouting();
 
 app.UseAuthentication();
 

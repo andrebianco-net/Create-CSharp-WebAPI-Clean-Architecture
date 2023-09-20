@@ -1,18 +1,24 @@
 {
-    "ConnectionStrings": {
-      "DefaultConnection": "YOUR STRING CONNECTION"
-    },
-    "Jwt": {
-      "SecretKey": "YOUR SECRET KEY",
-      "Issuer": "mywebsite.net",
-      "Audience": "http://www.mywebsite.net"
-    },
-    "Logging": {
-      "LogLevel": {
-        "Default": "Information",
-        "Microsoft.AspNetCore": "Warning"
-      }
-    },
-    "AllowedHosts": "*"
-  }
-  
+  "ConnectionStrings": {
+    "DefaultConnection": "YOUR STRING CONNECTION"
+  },
+  "Swagger": {
+    "Production": true,
+    "Debugging": true,    
+    "Name": "v1",
+    "Title": "ProductRegistrationService.API",
+    "Version": "v1"
+  },
+  "Jwt": {
+    "SecretKey": "YOUR SECRET KEY",
+    "Issuer": "mywebsite.net",
+    "Audience": "http://www.mywebsite.net"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
