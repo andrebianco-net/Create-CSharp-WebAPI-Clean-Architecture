@@ -6,7 +6,7 @@ namespace ProductRegistrationService.Application.interfaces
     {
         Task<IEnumerable<ProductDTO>> GetProducts();
         Task<ProductDTO> GetById(int? id);
-        Task Add(ProductDTO productDto);
+        Task<ProductDTO> Add(ProductDTO productDto);
         Task Update(ProductDTO productDto);
         Task Remove(int? id);
     }    

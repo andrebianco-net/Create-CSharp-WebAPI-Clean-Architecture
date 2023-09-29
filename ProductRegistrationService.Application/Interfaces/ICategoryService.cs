@@ -6,7 +6,7 @@ namespace ProductRegistrationService.Application.interfaces
     {
         Task<IEnumerable<CategoryDTO>> GetCategories();
         Task<CategoryDTO> GetById(int? id);
-        Task Add(CategoryDTO categoryDto);
+        Task<CategoryDTO> Add(CategoryDTO categoryDto);
         Task Update(CategoryDTO categoryDto);
         Task Remove(int? id);
     }    

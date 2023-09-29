@@ -17,10 +17,10 @@ namespace ProductRegistrationService.Application.Services
             _mapper = mapper;
         }
 
-        public async Task Add(ProductDTO productDto)
+        public async Task<ProductDTO> Add(ProductDTO productDto)
         {
-            var productEntity = _mapper.Map<Product>(productDto);
-            await _productRepository.CreateAsync(productEntity);
+            Product productEntity = _mapper.Map<Product>(productDto);
+            return _mapper.Map<ProductDTO>(await _productRepository.CreateAsync(productEntity));
         }
 
         public async Task<ProductDTO> GetById(int? id)

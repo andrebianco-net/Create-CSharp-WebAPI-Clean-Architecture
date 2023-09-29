@@ -16,9 +16,9 @@ namespace ProductRegistrationService.Infra.Data.Repositories
 
         public async Task<Category> CreateAsync(Category category)
         {
-            _categoryContext.Add(category);
+            _categoryContext.Add<Category>(category);
             await _categoryContext.SaveChangesAsync();
-            return category;
+            return (Category)category;
         }
 
         public async Task<Category> GetByIdAsync(int? id)

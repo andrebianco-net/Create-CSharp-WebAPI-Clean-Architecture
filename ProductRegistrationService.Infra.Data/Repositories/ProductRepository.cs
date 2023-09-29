@@ -19,7 +19,7 @@ namespace ProductRegistrationService.Infra.Data.Repositories
         {
             _productRepository.Add(product);
             await _productRepository.SaveChangesAsync();
-            return product;
+            return (Product)product;
         }
 
         public async Task<Product> GetByIdAsync(int? id)

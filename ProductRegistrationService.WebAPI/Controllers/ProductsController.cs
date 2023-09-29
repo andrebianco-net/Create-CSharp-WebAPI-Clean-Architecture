@@ -57,9 +57,9 @@ namespace ProductRegistrationService.WebAPI.Controllers
                 return BadRequest("Invalid data.");
             }
 
-            await _ProductService.Add(ProductDTO);
+            ProductDTO newProduct = await _ProductService.Add(ProductDTO);
 
-            return new CreatedAtRouteResult("GetProduct", new { id = ProductDTO.Id }, ProductDTO);
+            return new CreatedAtRouteResult("GetProduct", new { id = newProduct.Id }, newProduct);
  
         }
 

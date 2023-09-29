@@ -57,9 +57,9 @@ namespace ProductRegistrationService.WebAPI.Controllers
                 return BadRequest("Invalid data.");
             }
 
-            await _categoryService.Add(categoryDTO);
+            CategoryDTO newCategory = await _categoryService.Add(categoryDTO);
 
-            return new CreatedAtRouteResult("GetCategory", new { id = categoryDTO.Id }, categoryDTO);
+            return new CreatedAtRouteResult("GetCategory", new { id = newCategory.Id }, newCategory);
  
         }
 
