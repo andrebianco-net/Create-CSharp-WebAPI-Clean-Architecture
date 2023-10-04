@@ -132,15 +132,19 @@ $ git clone https://github.com/andrebianco-net/create-csharp-webapi-clean-archit
 
 **[** <ins>List migrations:</ins> dotnet ef migrations list --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj **[** --verbose **]]**
 
-#### 4. Compile project:
+#### 4. Update password in the SeedUserRoleInitial.cs, lines 32 and 51:
+
+Look for "YOUR PASSWORD" and change it.
+
+#### 5. Compile project:
 
 $ dotnet build
 
-#### 5. Test project:
+#### 6. Test project:
 
 $ dotnet test
 
-#### 6. Run project:
+#### 7. Run project:
 
 $ dotnet run --project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj
 
