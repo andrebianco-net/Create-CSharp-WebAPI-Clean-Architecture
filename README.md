@@ -116,10 +116,17 @@ The Inversion of Dependency occurs when we inject (Inject of Dependency) a concr
 
 $ git clone https://github.com/andrebianco-net/create-csharp-webapi-clean-architecture.git
 
-#### 2. Update file appsettings.json with a valid connection string:
+#### 2. Update file appsettings.json with a valid:
+
+First rename the file appsettings.template to appsettings.json.
 
 "ConnectionStrings": {
     "DefaultConnection": "Data Source=XXXXXX;Initial Catalog=XXXXXX;User Id=XXXXXX;Password=XXXXXX;TrustServerCertificate=true;"
+},
+
+ "Jwt": {
+    "SecretKey": "YOUR SECRET KEY",
+    ...
 },
 
 #### 3. Use migrations commands:
