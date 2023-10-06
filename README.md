@@ -1,7 +1,7 @@
 # create-csharp-webapi-clean-architecture
 
 ## Overview:
-Creating a C# Web API based on Clean Architecture.
+Creating a C# .NET Core Web API based on Clean Architecture.
 
 This example is an adaptation based on an example used in a course I have done. So it is a mixed with that example and my knowledge. Check the references to know more about, please.
 
