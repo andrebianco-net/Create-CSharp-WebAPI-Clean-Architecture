@@ -8,7 +8,7 @@ namespace ProductRegistrationService.Infra.IoC
 {
     public static class DependencyInjectionSeed
     {
-        public static IServiceCollection AddInfrastructureSeed(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddSeed(this IServiceCollection services, IConfiguration configuration)
         {
 
             services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
