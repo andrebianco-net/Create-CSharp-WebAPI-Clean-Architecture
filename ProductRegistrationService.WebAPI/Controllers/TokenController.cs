@@ -15,14 +15,17 @@ namespace ProductRegistrationService.WebAPI.Controllers
     {
         private readonly IAuthenticate _authentication;
         private readonly IConfiguration _configuration;
+        private readonly ILogger<TokenController> _logger;
 
         public TokenController(IAuthenticate authentication,
-                               IConfiguration configuration)
+                               IConfiguration configuration,
+                               ILogger<TokenController> logger)
         {
             _authentication = authentication ??
                 throw new ArgumentNullException(nameof(authentication));
             
             _configuration = configuration;
+            _logger = logger;
         }
 
         // [ApiExplorerSettings(IgnoreApi = true)]
@@ -51,18 +54,33 @@ namespace ProductRegistrationService.WebAPI.Controllers
         [HttpPost("LoginUser")]
         public async Task<ActionResult<UserToken>> Login([FromBody] LoginModel userInfo)
         {
-            var result = await _authentication.Authenticate(userInfo.Email, userInfo.Password);
+            dynamic _return;
 
-            if(result)
+            try
             {
-                return GenerateToken(userInfo);
-                //return Ok($"User {userInfo.Email} login successfully");
+
+                var result = await _authentication.Authenticate(userInfo.Email, userInfo.Password);
+
+                if(result)
+                {
+                    _return = GenerateToken(userInfo);
+                    //_return = Ok($"User {userInfo.Email} login successfully");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Invalid Login attempt.");
+                    _return = BadRequest(ModelState);
+                }
+                
             }
-            else
+            catch (Exception ex)
             {
+                _logger.LogError($"TokenController.LoginUser -> Error: {ex.Message}");
                 ModelState.AddModelError(string.Empty, "Invalid Login attempt.");
-                return BadRequest(ModelState);
+                _return = StatusCode(500, "Internal Server Error");
             }
+
+            return _return;
         }
 
         private UserToken GenerateToken(LoginModel userInfo)
