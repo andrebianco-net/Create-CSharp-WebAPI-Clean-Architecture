@@ -9,6 +9,7 @@ namespace ProductRegistrationService.Infra.IoC
     {
         public static IServiceCollection AddInfrastructureSerilog(this IServiceCollection services, IConfiguration configuration)
         {
+
             string folder = configuration["Serilog:Folder"];
             string file = configuration["Serilog:File"];
             int size = Convert.ToInt32(configuration["Serilog:Size"]);

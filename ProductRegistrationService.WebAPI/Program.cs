@@ -1,5 +1,6 @@
 using ProductRegistrationService.Infra.IoC;
 using Swashbuckle.AspNetCore.SwaggerUI;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,8 @@ builder.Services.AddInfrastructureSerilog(builder.Configuration);
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
+
+builder.Host.UseSerilog();
 
 // It needs to be the last one
 builder.Services.AddSeed(builder.Configuration);
@@ -45,6 +48,8 @@ else
 app.UseHttpsRedirection();
 
 app.UseStatusCodePages();
+
+app.UseSerilogRequestLogging();
 
 app.UseRouting();
 
