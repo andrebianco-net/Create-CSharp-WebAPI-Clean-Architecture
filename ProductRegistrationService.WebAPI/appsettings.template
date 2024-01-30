@@ -19,6 +19,9 @@
       "File": "your-log-file-name.log",
       "Size": 5242880
   },
+  "Seed": {
+      "Apply": false
+  },
   "Logging": {
     "LogLevel": {
       "Default": "Information",

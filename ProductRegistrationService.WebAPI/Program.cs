@@ -16,8 +16,11 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Host.UseSerilog();
 
-// It needs to be the last one
-builder.Services.AddSeed(builder.Configuration);
+// It needs to be the last one. Just use it after database update.
+if (Convert.ToBoolean(builder.Configuration["Seed:Apply"]))
+{
+    builder.Services.AddSeed(builder.Configuration);
+}
 
 var app = builder.Build();
 
