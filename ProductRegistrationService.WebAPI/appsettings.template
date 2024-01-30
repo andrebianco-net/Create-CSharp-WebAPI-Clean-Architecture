@@ -14,6 +14,11 @@
     "Issuer": "mywebsite.net",
     "Audience": "http://www.mywebsite.net"
   },
+  "Serilog": {
+      "Folder": "/your/folder",
+      "File": "your-log-file-name.log",
+      "Size": 5242880
+  },
   "Logging": {
     "LogLevel": {
       "Default": "Information",

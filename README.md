@@ -129,6 +129,12 @@ First rename the file appsettings.template to appsettings.json.
     ...
 },
 
+"Serilog": {
+    "Folder": "/your/folder",
+    "File": "your-log-file-name.log",
+    "Size": 5242880
+},
+
 #### 3. Use migrations commands:
 
 <ins>Create migrations:</ins> dotnet ef migrations add InitialDatabase --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj **[** --verbose **]**
