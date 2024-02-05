@@ -114,12 +114,15 @@ The Inversion of Dependency occurs when we inject (Inject of Dependency) a concr
 
 #### 1. Clone project:
 
+```bash
 $ git clone https://github.com/andrebianco-net/create-csharp-webapi-clean-architecture.git
+```
 
 #### 2. Update file appsettings.json with a valid:
 
 First rename the file appsettings.template to appsettings.json.
 
+```json
 "ConnectionStrings": {
     "DefaultConnection": "Data Source=XXXXXX;Initial Catalog=XXXXXX;User Id=XXXXXX;Password=XXXXXX;TrustServerCertificate=true;"
 },
@@ -134,16 +137,29 @@ First rename the file appsettings.template to appsettings.json.
     "File": "your-log-file-name.log",
     "Size": 5242880
 },
+```
 
 #### 3. Use migrations commands:
 
-<ins>Create migrations:</ins> dotnet ef migrations add InitialDatabase --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj **[** --verbose **]**
+<ins>Create migrations:</ins> 
+```bash
+$ dotnet ef migrations add InitialDatabase --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj [ --verbose ]
+```
 
-<ins>Update database:</ins> dotnet ef database update --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj **[** --verbose **]**
+<ins>Update database:</ins>
+```bash
+$ dotnet ef database update --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj [ --verbose ]
+```
 
-**[** <ins>Remove migrations:</ins> dotnet ef migrations remove --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj **[** --verbose **]**
+<ins>Remove migrations:</ins>
+```bash
+[$ dotnet ef migrations remove --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj [ --verbose ]
+```
 
-**[** <ins>List migrations:</ins> dotnet ef migrations list --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj **[** --verbose **]]**
+<ins>List migrations:</ins>
+```bash
+[$ dotnet ef migrations list --project ProductRegistrationService.Infra.Data/ProductRegistrationService.Infra.Data.csproj --startup-project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj [ --verbose ]]
+```
 
 #### 4. Update password in the SeedUserRoleInitial.cs, lines 32 and 51:
 
@@ -151,15 +167,21 @@ Look for "YOUR PASSWORD" and change it.
 
 #### 5. Compile project:
 
+```bash
 $ dotnet build
+```
 
 #### 6. Test project:
 
+```bash
 $ dotnet test
+```
 
 #### 7. Run project:
 
+```bash
 $ dotnet run --project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj
+```
 
 #### 8. From Docker to Azure Container
 
