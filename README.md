@@ -161,6 +161,38 @@ $ dotnet test
 
 $ dotnet run --project ProductRegistrationService.WebAPI/ProductRegistrationService.WebAPI.csproj
 
+#### 8. From Docker to Azure Container
+
+```bash
+$ docker build -t product-registration-service .
+```
+
+```bash
+[$ docker run -it product-registration-service]
+```
+
+```bash
+$ docker login youruricreatedinazurecontainerregistry.azurecr.io
+```
+
+```bash
+$ docker tag product-registration-service youruricreatedinazurecontainerregistry.azurecr.io/product-registration-service
+```
+
+```bash
+$ docker push youruricreatedinazurecontainerregistry.azurecr.io/product-registration-service
+```
+
+```bash
+[$ docker pull youruricreatedinazurecontainerregistry.azurecr.io/product-registration-service]
+```
+
+#### 9. Created in Azure Cloud Computing
+###
+![image](https://github.com/andrebianco-net/create-csharp-webapi-clean-architecture/assets/453193/fe8fbf95-6cf0-4c22-b695-592c357e9d3c)
+
+###
+
 ## References
 
 Solid Principles with C# .NET Core with Practical Examples & Interview Questions. Pro Code Guide. From https://procodeguide.com/design/solid-principles-with-csharp-net-core/
