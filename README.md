@@ -129,7 +129,7 @@ First rename the file appsettings.template to appsettings.json.
 
  "Jwt": {
     "SecretKey": "YOUR SECRET KEY",
-    ...
+    
 },
 
 "Serilog": {
