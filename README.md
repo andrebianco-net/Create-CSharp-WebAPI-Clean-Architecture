@@ -124,7 +124,7 @@ First rename the file appsettings.template to appsettings.json.
 
 ```json
 "ConnectionStrings": {
-    "DefaultConnection": "Data Source=XXXXXX;Initial Catalog=XXXXXX;User Id=XXXXXX;Password=XXXXXX;TrustServerCertificate=true;"
+    "DefaultConnection": "Data Source=XXXXXX;Initial Catalog=SkyDB;User Id=XXXXXX;Password=XXXXXX;TrustServerCertificate=true;"
 },
 
  "Jwt": {
