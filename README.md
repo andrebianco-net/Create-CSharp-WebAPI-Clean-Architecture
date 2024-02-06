@@ -214,6 +214,10 @@ $ docker push youruricreatedinazurecontainerregistry.azurecr.io/product-registra
 ![image](https://github.com/andrebianco-net/create-csharp-webapi-clean-architecture/assets/453193/fe8fbf95-6cf0-4c22-b695-592c357e9d3c)
 
 ###
+![image](https://github.com/andrebianco-net/create-csharp-webapi-clean-architecture/assets/453193/f60d4eab-c32a-40a4-bcd6-c3cbfeae5f3e)
+
+###
+![image](https://github.com/andrebianco-net/create-csharp-webapi-clean-architecture/assets/453193/05725026-ba19-4291-95c7-031835332725)
 
 ## References
 
